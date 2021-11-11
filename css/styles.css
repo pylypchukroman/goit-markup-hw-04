@@ -143,6 +143,34 @@ ul {
 .cont-nav .link:last-child {
   margin-right: 0;
 }
+.mail-logo::before {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  content: "";
+  background-image: url(../images/mail-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  align-items: center;
+}
+.mail-logo:hover::before {
+  background-color: red;
+}
+.tel-logo::before {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  content: "";
+  background-image: url(../images/phone-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  align-items: center;
+}
+.tel-logo:hover::before {
+  background-color: red;
+}
 
 /* основная часть */
 /* блок хиро */
@@ -216,9 +244,30 @@ ul {
 .benefits-description:last-child {
   margin-right: 0;
 }
+.benefits-description::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+.item-antena::before {
+  background-image: url(../images/antenna.svg);
+}
+.item-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.item-diagrama::before {
+  background-image: url(../images/diagram.svg);
+}
+.item-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
 .benefits-title {
   margin-bottom: 10px;
-
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -228,8 +277,6 @@ ul {
 .benefits-text {
   line-height: 1.71;
 }
-
-/* блок работы */
 .work {
   padding: 0 0 94px 0;
 }
@@ -242,7 +289,6 @@ ul {
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
-
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -255,8 +301,6 @@ ul {
 .work-img:last-child {
   padding-right: 0;
 }
-
-/* блок команда */
 .team {
   padding: 94px 0;
   background: #f5f4fa;
@@ -276,7 +320,6 @@ ul {
   height: 368px;
   width: 270px;
   margin-right: 30px;
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -286,7 +329,6 @@ ul {
 }
 .team-name {
   margin-bottom: 10px;
-
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -298,8 +340,6 @@ ul {
   line-height: 1.19;
   text-align: center;
 }
-
-/* блок фильтр */
 .filter {
   margin-top: 0;
   margin-bottom: 50px;
@@ -313,17 +353,14 @@ ul {
 .filter-btn:last-child {
   margin-right: 0;
 }
-
 .projects-filter {
   margin-top: 94px;
 }
-
 .filter-button {
   border-radius: 4px;
   border: transparent;
   padding: 6px 22px;
   background: #f5f4fa;
-
   color: var(--title-text-color);
   font-family: inherit;
   font-weight: 500;
@@ -337,19 +374,15 @@ ul {
   color: var(--primary-white);
   background-color: var(--accent-color);
 }
-
-/* блок проекты */
 .projects {
   padding-bottom: 94px;
   padding-top: 82px;
 }
-
 .projects-text {
   padding: 20px 24px;
 }
 .projects-title {
   margin-bottom: 4px;
-
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -363,14 +396,12 @@ ul {
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-
   padding-left: 0;
 }
 .projects-block {
   margin-right: 30px;
   margin-bottom: 30px;
   width: 370px;
-
   border: 1px solid #eeeeee;
 }
 .projects-block:last-child {
@@ -382,16 +413,12 @@ ul {
 .projects-block:nth-child(3n + 3) {
   margin-right: 0;
 }
-
-/* футер */
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-/* блок адреса */
 .address {
   margin-bottom: 9px;
-
   color: var(--primary-white);
   font-weight: 400;
   line-height: 1.7;
@@ -400,12 +427,10 @@ ul {
 .adress-list {
   margin-top: 20px;
 }
-/* блок контактов */
 .contacts {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-
   line-height: 1.7;
 }
 .contacts a {
@@ -420,16 +445,13 @@ ul {
 .contact-list:last-child {
   margin-bottom: 0;
 }
-/* логотип */
-.logo-second-color-footer {
+.contact-list .logo-second-color-footer {
   color: var(--primary-white);
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
-
-/* overlay */
 .overlay {
   max-width: 1600px;
   margin-left: auto;
