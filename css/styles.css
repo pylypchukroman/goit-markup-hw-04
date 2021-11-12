@@ -38,7 +38,10 @@ p {
   padding-left: 15px;
   padding-right: 15px;
 }
-
+/* .svg {
+  width: 300px;
+  height: 120px;
+} */
 body {
   color: var(--primary-text-color);
   font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -131,6 +134,8 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 .cont-nav-link:hover,
 .cont-nav-link:focus {
@@ -143,33 +148,23 @@ ul {
 .cont-nav .link:last-child {
   margin-right: 0;
 }
-.mail-logo::before {
+
+.footer-contacts-icon {
+  margin-right: 10px;
+  fill: #757575;
+  /* display: inline-block; */
+}
+.mail-icon {
   width: 16px;
   height: 12px;
-  margin-right: 10px;
-  content: "";
-  background-image: url(../images/mail-logo.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: inline-block;
-  align-items: center;
 }
-.mail-logo:hover::before {
-  background-color: red;
-}
-.tel-logo::before {
+.tel-icon {
   width: 10px;
   height: 16px;
-  margin-right: 10px;
-  content: "";
-  background-image: url(../images/phone-logo.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: inline-block;
-  align-items: center;
+  align-items: baseline;
 }
-.tel-logo:hover::before {
-  background-color: red;
+.cont-nav-link:hover .footer-contacts-icon {
+  fill: var(--accent-color);
 }
 
 /* основная часть */
@@ -316,8 +311,44 @@ ul {
   padding-bottom: 30px;
   text-align: center;
 }
+.social-media {
+  display: flex;
+  padding-left: 0;
+  justify-content: center;
+}
+.icon-img {
+  width: 20px;
+  height: 20px;
+  fill: var(--color3, #afb1b8);
+  border-radius: 4px;
+  object-fit: contain;
+}
+.icon-link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.social-media li:last-child {
+  margin-right: 0;
+}
+.icon-link:hover,
+.icon-link:focus {
+  background-color: var(--accent-color);
+  fill: white;
+}
+.icon-link:hover .icon-img,
+.icon-link:focus .icon-img {
+  fill: white;
+}
+
 .team-member {
-  height: 368px;
+  height: 428px;
   width: 270px;
   margin-right: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -340,6 +371,37 @@ ul {
   line-height: 1.19;
   text-align: center;
 }
+
+.clients {
+  padding: 94px 0;
+}
+.client-link {
+  width: 170px;
+  height: 92px;
+  background-color: var(--primary-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-list {
+  display: flex;
+  padding-left: 0;
+  justify-content: space-between;
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--color3, #afb1b8);
+  border-radius: 4px;
+  object-fit: contain;
+}
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: blue;
+}
 .filter {
   margin-top: 0;
   margin-bottom: 50px;
@@ -347,6 +409,23 @@ ul {
   display: flex;
   justify-content: center;
 }
+.filter-button:hover,
+.filter-button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  fill: white;
+}
+.client-link:hover .clients-icon,
+.client-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+
 .filter-btn {
   margin-right: 8px;
 }
@@ -404,6 +483,11 @@ ul {
   width: 370px;
   border: 1px solid #eeeeee;
 }
+.projects-block:hover,
+.project-block:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .projects-block:last-child {
   margin-right: 0;
 }
@@ -445,17 +529,38 @@ ul {
 .contact-list:last-child {
   margin-bottom: 0;
 }
-.contact-list .logo-second-color-footer {
+.logo-second-color-footer {
   color: var(--primary-white);
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
+
+.footer-common {
+  display: flex;
+  align-items: baseline;
+}
+.join {
+  margin-left: 70px;
+}
+.join-txt {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white);
+}
+.join .icon-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+.join .icon-link:hover {
+  background-color: var(--accent-color);
+}
 .overlay {
   max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
